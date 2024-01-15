@@ -3,7 +3,7 @@ from telegram import Bot
 
 # Replace with your Telegram bot token and channel ID
 token_telegram_bot = ""
-id_canal_telegram = -4023725807
+id_canal_telegram = 
 
 tokens_names = [
     ["0x2170Ed0880ac9A755fd29B2688956BD959F933F8", "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c"],
@@ -13,17 +13,17 @@ tokens_names = [
 last_tokens = [[], []]  # Record of tokens from the last 15 minutes, same format as tokens_names
 
 # Replace with the desired threshold percentage for change
-seuil_pourcentage = 10
+seuil_pourcentage = 0.1
 
 max_requests_limit = 300  # Max requests per minute
 
 # Set the candle period in minutes (15 minutes)
-periode_bougies_minutes = 15
+periode_bougies_minutes = 0.5
 
 bot_telegram = Bot(token=token_telegram_bot)
 
 async def start():
-    await bot_telegram.send_message(chat_id=id_canal_telegram, text="Bot Started Working Made By div_yt on Discord")
+    await bot_telegram.send_message(chat_id=id_canal_telegram, text="Bot Starting")
 
 async def notifier_telegram(message):
     await bot_telegram.send_message(chat_id=id_canal_telegram, text=message)
